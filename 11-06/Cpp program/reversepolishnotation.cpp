@@ -1,3 +1,4 @@
+//Evaluate the reverse polish notation 
 #include<iostream>
 #include<cmath>
 #include<stack>
@@ -16,7 +17,7 @@ int isOperator(char ch){
 int isOperand(char ch){
    if(ch >= '0' && ch <= '9')
       return 1;//character is an operand
-   return -1;//not an operand
+   return -1;
 }
 float operation(int a, int b, char op){
    //Perform operation
@@ -30,9 +31,7 @@ float operation(int a, int b, char op){
       return b/a;
    else if(op == '^')
       return pow(b,a); //find b^a
-   else
-      return INT_MIN; //return negative infinity
-}
+   }
 float postfixEval(string postfix){
    int a, b;
    stack<float> stk;
