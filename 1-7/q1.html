@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<h2>Library Management System</h2>
+
+<script type="text/javascript">
+        function sample() {
+            var bki = document.getElementById("ip").value;
+            console.log(bki);
+            var x = document.getElementById("table").rows[bki].innerHTML;
+            console.log(x);
+            document.getElementById("bki").innerHTML = x;
+        }
+    </Script>
+</head>
+
+<body>
+    
+  
+<table border="1" id="table">
+  <tr>
+    <th>Book ID</th>
+    <th>ISBN</th>
+    <th>Book Name</th>
+	<th>Genere</th>
+	<th>Price</th>
+	<th>Author</th>
+	<th>Publisher</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>12345</td>
+    <td>Harry Potter</td>
+	<td>Fictional</td>
+	<td>900</td>
+	<td>J.K.Rowling</td>
+	<td>Ideal publisher</td>
+	
+  <tr>
+    <td>2</td>
+    <td>54321</td>
+    <td>The secret</td>
+	<td>Motivational</td>
+	<td>1999</td>
+	<td>Rhode byrne</td>
+	<td>Famous publisher</td>
+	
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>321456</td>
+    <td>Playing it my way</td>
+	<td>Sports</td>
+	<td>1800</td>
+	<td>Sachin Tendulkar</td>
+	<td>Quant publisher</td>
+	
+  </tr>
+
+</table>     
+  <p>Enter the book ID</p>
+    <input type="text" id="ip" />
+    <button title="submit" id="button" onclick="sample()">submit</button>
+
+    <p id="bki"></p>
+</body>
+</html>
