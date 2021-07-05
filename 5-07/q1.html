@@ -2,6 +2,21 @@
 <html>
 	<body>
 		<h2>Library Management System</h2>
+
+<script type="text/javascript">
+        function sample() {
+            var bki = document.getElementById("ip").value;
+            console.log(bki);
+            var x = document.getElementById("table").rows[bki].innerHTML;
+            console.log(x);
+            document.getElementById("bki").innerHTML = x;
+        }
+    </Script>
+</head>
+
+<body>
+    
+  
 <table border="1" id="table">
   <tr>
     <th>Book ID</th>
@@ -43,5 +58,10 @@
   </tr>
 
 </table>     
+  <p>Enter the book ID</p>
+    <input type="text" id="ip" />
+    <button title="submit" id="button" onclick="sample()">submit</button>
+
+    <p id="bki"></p>
 </body>
 </html>
