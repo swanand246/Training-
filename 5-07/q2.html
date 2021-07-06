@@ -1,97 +1,197 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-   border-left: none;
-    border-right: none;
-}
+	<body>
+		<h2>Library Management System</h2>
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-   border-left: none;
-    border-right: none;
+<script type="text/javascript">
+      
+  function sortAID() {
+  var tab, rw, sw, i, x, y, swap;
+  tab = document.getElementById("table");
+  sw = true;
+ 
+  while (sw) {
     
+    sw = false;
+    rw = tab.rows;
+    for (i = 1; i < (rw.length - 1); i++) {
+      swap = false;
+      x = rw[i].getElementsByTagName("td")[0];
+      y = rw[i + 1].getElementsByTagName("td")[0];
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        swap = true;
+        break;
+      }
+    }
+    if (swap) {
+      rw[i].parentNode.insertBefore(rw[i + 1], rw[i]);
+      sw = true;
+    }
+  }
 }
-td:nth-child(2){
-    border-right:1px solid white;
-     border-left: none;
-    border-right: none;
+function sortAPrice() {
+  var tab, rw, sw, i, x, y, swap;
+  tab = document.getElementById("table");
+  sw = true;
+ 
+  while (sw) {
+    
+    sw = false;
+    rw = tab.rows;
+    for (i = 1; i < (rw.length - 1); i++) {
+      swap = false;
+      x = rw[i].getElementsByTagName("td")[4];
+      y = rw[i + 1].getElementsByTagName("td")[4];
+      if (Number(x.innerHTML) > Number(y.innerHTML)) {
+        swap = true;
+        break;
+      }
+    }
+    if (swap) {
+      rw[i].parentNode.insertBefore(rw[i + 1], rw[i]);
+      sw = true;
+    }
+  }
 }
-
-tr:nth-child(even) {
-  background-color:1px solid white ;
-  border-right:1px solid white;
-  border-left:1px solid white;
-   border-left: none;
-    border-right: none;
+function sortDID() {
+  var tab, rw, sw, i, x, y, swap;
+  tab = document.getElementById("table");
+  sw = true;
+ 
+  while (sw) {
+    
+    sw = false;
+    rw = tab.rows;
+    for (i = 1; i < (rw.length - 1); i++) {
+      swap = false;
+      x = rw[i].getElementsByTagName("td")[0];
+      y = rw[i + 1].getElementsByTagName("td")[0];
+      if (Number(x.innerHTML) < Number(y.innerHTML)) {
+        swap = true;
+        break;
+      }
+    }
+    if (swap) {
+      rw[i].parentNode.insertBefore(rw[i + 1], rw[i]);
+      sw = true;
+    }
+  }
 }
-
-</style>
+function sortDPrice() {
+  var tab, rw, sw, i, x, y, swap;
+  tab = document.getElementById("table");
+  sw = true;
+ 
+  while (sw) {
+    
+    sw = false;
+    rw = tab.rows;
+    for (i = 1; i < (rw.length - 1); i++) {
+      swap = false;
+      x = rw[i].getElementsByTagName("td")[4];
+      y = rw[i + 1].getElementsByTagName("td")[4];
+      if (Number(x.innerHTML) < Number(y.innerHTML)) {
+        swap = true;
+        break;
+      }
+    }
+    if (swap) {
+      rw[i].parentNode.insertBefore(rw[i + 1], rw[i]);
+      sw = true;
+    }
+  }
+}
+    </Script>
 </head>
+
 <body>
-
-<h2>HTML table excercise</h2>
-
-<table>
-  <tr>
-    <th colspan="4" bgcolor="#ADD8E6"><center><b>A complex table</b></center></th>
     
-  </tr>
-  <tr bgcolor="#F6F6F6">
-    <td ><b>Invoice #123456789</b></td>
-    <td></td>
-    <td></td>
-    <td><b>14 January 2025</b></td>
+  
+<table border="1" id="table">
+  <tr>
+    <th>Book ID</th>
+    <th>ISBN</th>
+    <th>Book Name</th>
+	<th>Genere</th>
+	<th>Price</th>
+	<th>Author</th>
+	<th>Publisher</th>
   </tr>
   <tr>
-    <td><b>Pay to:</b><br>Acme Billing Co.<br>123 Main St.<br> CityVille, NA 12345</td>
-    <td>
-    <td><b>Customer:</b><br>John Smith<br>321 Willow Way<br>Southeast Northwestshire,MA 54321</td>
-  </tr>
-  <tr bgcolor="#F6F6F6">
-    <td><b>Name/Description</b></td>
-    <td><b>Qty.</b></td>
-    <td><b>@</b></td>
-    <td><b>Cost</b></td>
+    <td>5</td>
+    <td>12345</td>
+    <td>Harry Potter</td>
+	<td>Fictional</td>
+	<td>900</td>
+	<td>J.K.Rowling</td>
+	<td>Ideal publisher</td>
+	
+  <tr>
+    <td>4</td>
+    <td>54321</td>
+    <td>The secret</td>
+	<td>Motivational</td>
+	<td>1999</td>
+	<td>Rhode byrne</td>
+	<td>Famous publisher</td>
+	
   </tr>
   <tr>
-    <td>Paperclips</td>
-    <td>1000</td>
-    <td>0.01</td>
-    <td>10.00</td>
+    <td>6</td>
+    <td>321456</td>
+    <td>Playing it my way</td>
+	<td>Sports</td>
+	<td>1800</td>
+	<td>Sachin Tendulkar</td>
+	<td>Quant publisher</td>
+	
   </tr>
-  <tr>
-    <td>Staples (box)</td>
-    <td>100</td>
-    <td>1.00</td>
-    <td>100.00</td>
-    
+	 <tr>
+    <td>7</td>
+    <td>89766</td>
+    <td>Swami</td>
+	<td>Historical</td>
+	<td>1509</td>
+	<td>Ranjit Desai</td>
+	<td>Goodread publisher</td>
+	
   </tr>
-  <tr bgcolor="#F6F6F6">
-    <td><b>Subtotal</b></td>
-    <td></td>
-    <td></td>
-    <td>110.00</td>
+   <tr>
+    <td>1</td>
+    <td>432124</td>
+    <td>2 states</td>
+	<td>Fictional</td>
+	<td>800</td>
+	<td>Chetan Bhagat</td>
+	<td>Quality publisher</td>
+	
   </tr>
-    <tr bgcolor="#F6F6F6">
-    <td><b>Tax</b></td>
-    <td></td>
-    <td>8%</td>
-    <td>8.80</td>
+   <tr>
+    <td>2</td>
+    <td>90987</td>
+    <td>Who will cry when you die</td>
+	<td>Motivational</td>
+	<td>999</td>
+	<td>Robin Sharma</td>
+	<td>PASK publisher</td>
+	
   </tr>
-  <tr bgcolor="#F6F6F6">
-    <td><b>Grand Total</b></td>
-    <td></td>
-    <td></td>
-    <td>$ 118.80</td>
+   <tr>
+    <td>3</td>
+    <td>876591</td>
+    <td>Batatyachi chaal</td>
+	<td>Comedy</td>
+	<td>459</td>
+	<td>P.L.Deshpande</td>
+	<td>GM publisher</td>
+	
   </tr>
-</table>
+</table>     
+<br>
+    <button title="submit" id="button" onclick="sortAID()">Sort Ascending by ID</button> &nbsp
+	    <button title="submit" id="button" onclick="sortAPrice()">Sort Ascending by Price</button> &nbsp
+	    <button title="submit" id="button" onclick="sortDID()">Sort Descending By ID</button> &nbsp
+		<button title="submit" id="button" onclick="sortDPrice()">Sort Descending by Price</button> &nbsp
 
 </body>
 </html>
