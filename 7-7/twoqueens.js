@@ -1,10 +1,3 @@
-
-
-// JavaScript implementation of the approach
-
-
-// Function that returns true if the queen
-// can attack the opponent
 function canQueenAttack(queen1row, queen1col, queen2row, queen2col)
 {
 	// If queen and the opponent are in the same row
