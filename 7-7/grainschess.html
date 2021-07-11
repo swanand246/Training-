@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Grains On Chessboard</h2>
+<br>
+<label>Enter the number of box on Chessboard</label><br>
+<input type="text" id="inp">
+<br>
+<br>
+<button onclick="count_grains()">Enter</button>
+
+<p id="output"></p>
+
+<script type="text/javascript" >
+function count_grains(){
+	var n = document.getElementById("inp").value;
+	if(n>0 && n<65){
+		var y = 2**(n-1);
+		document.getElementById("output").innerHTML = "Number of Grains: " + y;
+	}
+	else{
+		document.getElementById("output").innerHTML = "This box is not valid.Please try again!!!";
+	}
+}
+</script>
+
+</body>
+</html>
