@@ -1,0 +1,20 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "complex-js": "^6.0.3-alpha",
+    "complex.js": "^2.0.15",
+    "express": "^4.17.1",
+    "math.js": "^1.1.46",
+    "mathjs": "^9.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
